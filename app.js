@@ -1,12 +1,13 @@
 const express = require('express')
 const indexRouter = require('./routes/indexRouter');
-const formRouter = require('./routes/formRouter');
+
 
 const app = express();
 const path = require('path');
 
 app.set('views', path.join(__dirname, "views"));
 app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended: true }));
 
 
 // app.get("/", (req, res) => {
@@ -15,7 +16,7 @@ app.set('view engine', 'ejs');
 
 
 app.use("/", indexRouter);
-app.use('/new', formRouter);
+
 
 
 const PORT = 3000;

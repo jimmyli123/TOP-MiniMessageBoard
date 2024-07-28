@@ -8,10 +8,10 @@
 <body>
     <header>Submit a message</header>
     <h1>Hi this is a form.</h1>
-    <form action="POST">
-        <input type="text" id="name">
-        <input type="text" id="message">
-        <button>Submit</button>
+    <form method="POST" action="/new">
+        <input type="text" name="messageUser" >
+        <input type="text" name="messageText">
+        <button type="submit">Submit</button>
     </form>
 
 </body>
